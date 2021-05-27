@@ -1,0 +1,128 @@
+/*declaração de variaveis*/
+:root{
+    --red_color: #E50914;
+    --black_color: #141414;
+}
+
+/* ++++++++++++++++++++ Font-Faces ++++++++++++++++++++ */
+@font-face {
+    font-family: SansLight;
+    src: url('../netflix-sans-cufonfonts-webfont/NetflixSansLight.woff');
+   }
+
+/* ++++++++++++++++++++ Elementos-Base ++++++++++++++++++++ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--black_color);
+    font-family: SansLight, "HelveticaNeue", Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+header .container{
+    display: flex;
+    margin: 0 56px 10px 56px;
+    flex-direction: row; /*default*/
+    padding: 28px 0 0;
+    justify-content: space-between;
+}
+
+.svg-icon-netflix-logo{
+    height: 2.25rem;
+    width: 8.375rem;
+    padding-top: 0;
+    fill: var(--red_color);    
+}
+/*
+.netflix_logo{
+    display: flex;
+    height: 2.25rem;
+    width: 8.375rem;
+}
+*/
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 15px;
+}
+
+header nav a:hover{
+    color: #FFF;
+}
+
+/* ++++++++++++++++++++ Filme-Principal ++++++++++++++++++++ */
+.mainfilm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*inversão flex -> justify passa a alinhar verticalmente */
+    align-items: flex-start; /*alinhamento horizontal pros elementos começarem sempre da esquerda p/ direita */
+    margin: 30px 56px 0 56px;
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)100%), url('../img/supergirl_capa2.png') no-repeat;
+    height: 400px;
+    background-size: cover; /*pega a área de cobertura da caixa*/
+}
+
+.mainfilm .container{
+    padding-left: 30px;
+    width: 70%;
+}
+
+.film_title{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.mainfilm .description{
+    margin-top: 0.625rem;
+    margin-bottom: 40px;
+}
+
+.btn-film{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 1rem 1.5rem;
+    margin-right: 1rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.btn-film:hover{
+    background-color: white;
+    color: black;
+}
+
+.watch, .info, .trailer{
+    margin-left: 8px;
+}
+
+.film-box{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.favorites, .trendings{
+    font-size: 2rem;
+    display: flex;
+    font-weight: bold;
+}
+
+.item{
+    cursor: pointer;
+}
+
+.film-carousel{
+    margin: 1rem 3.5rem;
+    
+}
+
+
